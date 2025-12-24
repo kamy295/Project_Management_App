@@ -6,4 +6,6 @@ a backend project for Project Management
 
 - Node JS
 - Express
-- MongoDB (mongoose)
+- MongoDB (mongoose + atlas)
+- Bcrypt
+- JWT Token
