@@ -12,3 +12,4 @@ a backend project for Project Management
 - JWT Token
 - MailGen and nodemailer
 - express-validator
+- cookie-parser - express can access cookies with this

@@ -90,13 +90,13 @@ userSchema.methods.generateAccessToken = function () {
 
 // generate refresh token
 userSchema.methods.generateRefreshToken = function () {
-  (jwt.sign({
-    _id: this._id,
-    email: this.email,
-    username: this.username,
-  }),
+  return jwt.sign(
+    {
+      _id: this._id,
+    },
     process.env.REFRESH_TOKEN_SECRET,
-    { expiresIn: process.env.REFRESH_TOKEN_EXPIRY });
+    { expiresIn: process.env.REFRESH_TOKEN_EXPIRY },
+  );
 };
 
 // temporary token (could be used for verify email, etc.)
